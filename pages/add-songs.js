@@ -6,10 +6,7 @@ import Image from "next/dist/client/image";
 import AWS from "aws-sdk";
 import { useRouter } from 'next/router';
 
-const S3_BUCKET = "deltify-images";
-const REGION = "ap-south-1";
-// const ACCESS_KEY = "AKIA4ZSDXCY52QXDT5XP";
-// const SECRET_ACCESS_KEY = "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";
+
 
 AWS.config.update({
   accessKeyId: process.env.NEXT_PUBLIC_ACCESS_KEY,
@@ -17,8 +14,8 @@ AWS.config.update({
 });
 
 const myBucket = new AWS.S3({
-  params: { Bucket: S3_BUCKET },
-  region: REGION,
+  params: { Bucket: process.env.NEXT_PUBLIC_S3_BUCKET },
+  region: process.env.NEXT_PUBLIC_REGION,
 });
 
 export default function addSong(props) {
@@ -60,7 +57,7 @@ export default function addSong(props) {
     const params = {
       ACL: "public-read",
       Body: imageUpload,
-      Bucket: S3_BUCKET,
+      Bucket: process.env.NEXT_PUBLIC_S3_BUCKET,
       Key: imageUpload.name,
     };
 
