@@ -1,15 +1,36 @@
-.container {
+/* .container {
   padding: 0 2rem;
-}
+} */
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.form {
+  margin: 0 auto;
+  /* text-align: center; */
+  max-width: 656px;
+}
+
+.formBody {
+  width: 100%;
+}
+
+.formItem {
+  margin: 12px;
+  height: 36px;
+  width: 100%;
+}
+
+.nav {
+  padding: 0.4rem;
+  background-color: rgb(237, 254, 238);
+  display: grid;
+  grid-template-columns: 75% 25%;
+  border-bottom: 1px solid rgb(160, 160, 160);
 }
 
 .footer {
@@ -29,7 +50,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #07be16;
   text-decoration: none;
 }
 
@@ -40,59 +61,145 @@
 }
 
 .title {
+  display: flex;
+  align-items: center;
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-.title,
-.description {
-  text-align: center;
-}
 
 .description {
-  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
   line-height: 1.5;
-  font-size: 1.5rem;
 }
 
 .code {
-  background: #fafafa;
+  background: transparent;
+  margin-left: 1.5rem;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.code a:hover,
+.code a:focus,
+.code a:active {
+  text-decoration: underline;
+}
+
 .grid {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+  flex-wrap: wrap; */
+  max-width: 1500px;
+  margin-top: 12px;
+  padding: 0 32px;
 }
+
+.songsHeader {
+  margin: 0 -32px 16px;
+  padding: 0 32px;
+  border-bottom: 1px solid rgb(171, 171, 171);
+}
+
+
+
+.coverImage {
+  padding: 6px
+}
+
+.songRow {
+  display: grid;
+  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr);
+  grid-gap: 16px;
+  padding: 0 16px;
+}
+
+.artistRow {
+  display: grid;
+  grid-template-columns: [index] 2% [first] 23% [var1] 15% [last] 60%;
+  grid-gap: 16px;
+  padding: 0 16px;
+}
+
+.songTitle {
+  display: flex;
+}
+
+.song {
+  display: flex;
+  /* width: 280px; */
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  
+}
+
+.songItem {
+  display: flex;
+  align-items: center;
+}
+
+
+.songHeaderItem {
+  font-size: 0.92rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.songNameArtist {
+  padding-left: 8px;
+  display: grid;
+  align-items: center;
+}
+
+.songName {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.songArtist {
+  font-size: 0.875rem;
+}
+
+/* .song h3 {
+  margin: 0.5rem;
+} */
 
 .card {
   margin: 1rem;
   padding: 1.5rem;
+  width: 100%;
   text-align: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  /* max-width: 1000px; */
 }
 
-.card:hover,
+/* .card:hover,
 .card:focus,
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
-}
+} */
 
 .card h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
