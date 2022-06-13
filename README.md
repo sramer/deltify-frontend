@@ -6,8 +6,8 @@ A simple spotify like CRUD Application
 
 ## About
 - This application is divided into two repositories. [Deltify - Backend](https://github.com/sramer/Deltify) and [deltify-frontend](https://github.com/sramer/deltify-frontend).
-- This application uses `Evan Millers Bayesian approach` alogrithm for calculating the average rating of the song.
-- Artist rating can be calulated by `(sum of avg rating of all aritst songs) / (sum of avg rating of all songs)`. 
+- This application uses `Evan Millers Bayesian approach` alogrithm for calculating the average rating of a song.
+- Artist rating can be calulated by `(sum of avg rating of all artist songs) / (sum of avg rating of all songs)`. 
 ## Tech Stack
 
 **Client:** Next.js, TailwindCSS, AWS S3.
@@ -80,7 +80,7 @@ The server will starts at [localhost:3000](http://localhost:3000)
 
 ## Environment Variables for Deltify Backend application
 
-This application uses Mongodb database, You'll need to create a new instance for this application and connect it with your own credentials. Create a file named `.env` in the project root folder and add the below information.
+This application uses Mongodb database, You'll need to create a new instance for this application and connect it with your own credentials. Create a file named `.env` inside the project root folder and add the below information.
 
 `DB_CONNECT = <mondodb-connection key>`
 
