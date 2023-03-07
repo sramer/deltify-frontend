@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Image from "next/dist/client/image";
 import AWS from "aws-sdk";
 import { useRouter } from 'next/router';
+import Head from 'next/head'
 
 
 
@@ -105,6 +106,11 @@ export default function addSong(props) {
 
   return (
     <div className="">
+      <Head>
+        <title>Deltify | Add-Song</title>
+        <meta name="description" content="Created by Sairam Aayachya" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <nav>
         <Navbar />
       </nav>
